@@ -46,8 +46,6 @@ for NumAve = 1:size(data.diffShots,3)
     clear CurrentShots
 end
 
-
-
     mkdir(['output/' pathName.outputFolder '_Inf'])
     mkdir(['output/' pathName.outputFolder '_20'])
     mkdir(['output/' pathName.outputFolder '_10'])
@@ -62,7 +60,6 @@ for n = 1:in.systemsToGenerate
 end
 
 %%
-
 
 for n = 1:in.systemsToGenerate
 
@@ -125,7 +122,7 @@ for n = 1:in.systemsToGenerate
     axis square;
     colormap(gray)
     temp1= g.CData-min(min(g.CData));
-    temp2=temp1./max(max(temp1));
+    temp2= temp1./max(max(temp1));
     imwrite(temp2, ['output/' pathName.outputFolder '_2/spec_'  num2str(n,'%0.5d') '.png'])
     
     
